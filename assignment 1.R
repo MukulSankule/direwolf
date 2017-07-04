@@ -72,6 +72,11 @@ y <- a*x + b + e
 
 plot(x,y)
 
+d <- data.frame(y,x)
+reg <- lm( y ~ x, data = d)
+abline(reg)
+
+
 d <- data.frame(y,x,e)
 reg <- lm( y ~ x + e, data = d)
 
